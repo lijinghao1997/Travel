@@ -1,15 +1,15 @@
 <template>
     <div class="header">
-        <div class="header-left">
+        <div class="header-left back-icon">
             <span class="iconfont">&#xe624;</span>
         </div>
         <div class="header-input">
-            <span class="icontfont">&#xe632;</span>
+            <span class="iconfont">&#xe632;</span>
             输入城市景点游玩主题
         </div>
         <div class="header-right">
             城市
-            <span class="iconfont">&#xe62d;</span>
+            <span class="iconfont arrow-icon">&#xe62d;</span>
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 </script>
 // 使用scoped来限制样式只对当前组件有效
 <style lang="stylus" scoped>
-  @import '~@/assets/styles/varibles.styl';
+  @import '~styles/varibles.styl';
   .header
     display: flex
     height: .86rem
@@ -42,11 +42,12 @@ export default {
       margin-top: .12rem
       margin-left: .2rem
       padding-left: .2rem
-      cololr: #ccc
+      color: #ccc
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
       float: right
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: -.04rem
         font-size: .24rem

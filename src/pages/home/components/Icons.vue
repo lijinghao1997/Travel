@@ -16,6 +16,9 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props:{
+    list: Array
+  },
   data (){
     return{
       iconList: [{
@@ -62,7 +65,7 @@ export default {
       pages () {
         //   组装出一个二维数组，来实现多页切换icons轮播效果
           const pages = []
-          this.iconList.forEach((item,index)=>{
+          this.list.forEach((item,index)=>{
               const page = Math.floor(index/8)
               if(!pages[page]){
                   pages[page] = []
@@ -82,6 +85,7 @@ export default {
     height : 0
     padding-bottom : 50%
   .icons
+    margin-top : .2rem
     height : 0
     padding-bottom : 50%
     overflow : hidden
@@ -113,7 +117,7 @@ export default {
         height : .44rem
         text-align : center
         white-space : nowrap 
-        
+
         color : $darkTextColor
 
 </style>

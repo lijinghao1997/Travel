@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-        <div class="header-left back-icon">
-            <span class="iconfont">&#xe624;</span>
+        <div class="header-left ">
+            <span class="iconfont back-icon">&#xe624;</span>
         </div>
         <div class="header-input">
             <span class="iconfont">&#xe632;</span>
@@ -30,19 +30,15 @@ export default {
   @import '~styles/varibles.styl';
   .header
     display: flex
-    height: .86rem
+    height: $headerHeight
     background : $bgColor
     color: #fff
     .header-left
-        position : relative
-        width: .64rem
-        float: left
-        .back-icon
-          position : absolute
-          top : 0
-          left : 0
-          text-align: center
-          font-size: .4rem
+      width: .64rem
+      float: left
+      .back-icon
+        text-align: center
+        font-size: .4rem
     .header-input
       flex: 1
       line-height: .64rem
@@ -57,6 +53,7 @@ export default {
       min-width: 1.04rem
       float: right
       text-align: center
+      padding : 0.1rem
       color: #fff
       .arrow-icon
         margin-left: -.04rem

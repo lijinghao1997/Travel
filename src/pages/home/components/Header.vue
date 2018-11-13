@@ -7,10 +7,13 @@
             <span class="iconfont">&#xe632;</span>
             输入城市景点游玩主题
         </div>
-        <div class="header-right">
+        <router-link to="/city">
+          <div class="header-right">
             {{this.city}}
             <span class="iconfont arrow-icon">&#xe62d;</span>
-        </div>
+          </div>
+        </router-link>
+        
     </div>
 </template>
 
@@ -31,9 +34,13 @@ export default {
     background : $bgColor
     color: #fff
     .header-left
+        position : relative
         width: .64rem
         float: left
         .back-icon
+          position : absolute
+          top : 0
+          left : 0
           text-align: center
           font-size: .4rem
     .header-input

@@ -53,6 +53,7 @@ export default {
   methods: {
       handleCity (city) {
         this.$store.dispatch('changeCity',city)
+        this.$router.push('/')
       }
   }
 }

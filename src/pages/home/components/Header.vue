@@ -9,7 +9,7 @@
         </div>
         <router-link to="/city">
           <div class="header-right">
-            {{this.city}}
+            {{this.$store.state.city}}
             <span class="iconfont arrow-icon">&#xe62d;</span>
           </div>
         </router-link>
@@ -20,9 +20,7 @@
 <script>
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
-  }
+  
 }
 </script>
 // 使用scoped来限制样式只对当前组件有效

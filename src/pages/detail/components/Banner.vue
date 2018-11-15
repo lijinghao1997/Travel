@@ -1,16 +1,36 @@
 <template>
-    <div class="banner">
-        <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_600x330_93d96bdf.jpg">
-        <div class="banner-info">
-            <div class="banner-title">北京欢乐谷(AAA景区)</div>
-            <div class="banner-number"><span class="iconfont banner-icon">&#xe632;</span>39</div>
+    <div>
+        <div class="banner" @click="handleBannerClick">
+            <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_600x330_93d96bdf.jpg">
+            <div class="banner-info">
+                <div class="banner-title">北京欢乐谷(AAA景区)</div>
+                <div class="banner-number"><span class="iconfont banner-icon">&#xe632;</span>39</div>
+            </div>
         </div>
+        <common-gallery v-show="showGallery" @close="handleClose"></common-gallery>
     </div>
 </template>
 
 <script>
+import CommonGallery from 'common/gallery/Gallery'
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  components: {
+      CommonGallery,
+  },
+  data () {
+      return{
+          showGallery: false,
+      }
+  },
+  methods: {
+      handleBannerClick () {
+          this.showGallery = true
+      },
+      handleClose (){
+          this.showGallery = false
+      }
+  }
 }
 </script>
 

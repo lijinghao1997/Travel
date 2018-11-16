@@ -40,7 +40,13 @@ export default {
       }
   },
   activated () {
+      //这个事件绑定在window这个全局对象上，那么在每个页面都会执行这个方法
+      //如果不进行揭榜，就会造成较多的bug
       window.addEventListener('scroll',this.handleScroll)
+  },
+  deactivated () {
+      //对全局事件进行解绑,在页面隐藏就不会发生
+      window.removeEventListener('scroll',this.handleScroll)
   }
 }
 </script>
